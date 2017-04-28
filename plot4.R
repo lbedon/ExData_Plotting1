@@ -16,7 +16,7 @@ if(!file.exists(filename)){
   unzip("household_power_consumption.zip")
 }
 
-hpc<-read.table("household_power_consumption.txt",sep = ";",stringsAsFactors = 0)
+hpc<-read.table("household_power_consumption.txt",sep = ";",stringsAsFactors = 0, na.strings = "?")
 
 ## Find the needed range
 range<-grep("1/2/2007",hpc[,1])[1]
